@@ -1,0 +1,117 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Mama Noord - voor moeders door moeders</title>
+        <style type="text/css">
+            .outerbox {
+                position : relative;
+            }
+            #box {
+                position : absolute;
+                text-align : center;
+                margin-left : 33%;
+                display : none;
+                height : 150px;
+                width : 450px;
+            }
+            #copyright {
+                position : absolute;
+                text-align : center;
+                margin-left : 33%;
+                display : block;
+                height : 150px;
+                width : 450px;
+                bottom : 0px;
+                font-size : small;
+            }
+            .elem {
+                position : absolute;
+                top : 50%;
+                width : 150px;
+                height : 150px;
+                text-align : center;
+            }
+            .logo {
+                right : 75%;
+            }
+            .social {
+                top : 100px;
+                left : 75%;
+                display : none;
+            }
+            .address {
+                top : 80px;
+                display : none;
+                right : 30%;
+                font-size : 150%;
+            }
+            .vcard {
+                display : none;
+                visibility : hidden;
+            }
+            .sep {
+                margin : 5px;
+            }</style>
+        <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    </head>
+    <body>
+        <div class="outerbox">
+            <div id="box">
+                <div class="logo elem"><img width="150" height="150"
+                        src="Mama%20Noord%20-%20logo%20-%20small.png" alt="Mama Noord - logo"
+                     /></div>
+                <div class="address elem" lang="nl">Elke tweede zaterdag 10u Cafe de Pont<br />
+                    <span id="fsq"><a class="fourSq-widget"
+                            href="https://foursquare.com/intent/venue.html"></a></span></div>
+                <div class="social elem">
+                    <div class="sep email"><a href="malto:info@mamanoord.nl"
+                        >info@mamanoord.nl</a></div>
+                    <div class="sep tel">&#9990; 06-206 596 18</div>
+                    <div class="sep">
+                        <a href="http://mamanoord.tumblr.com/"><img src="twitter_16.png"
+                                alt="Twitter" /></a>
+                        <a href="http://nl-nl.facebook.com/mamanoord"><img src="facebook_16.png"
+                                alt="Facebook" /></a>
+                        <a href="http://mamanoord.tumblr.com/"><img src="tumblr_16.png"
+                                alt="Tumblr Blog" /></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="vcard" style="display:none;visibility:hidden;">
+            <p class="fn">Mama Cafe</p>
+            <p class="adr">
+                <span class="street-address">Buiksloterweg 3-5</span>
+                <span class="postal-code">1031 CC</span>
+                <span class="locality">Amsterdam</span>
+            </p>
+            <span class="email"><a href="malto:info@mamanoord.nl">info@mamanoord.nl</a></span>
+            <span class="tel">&#9990; 06-206 596 18</span>
+        </div>
+        <script type="text/javascript">
+  (function() {
+    window.___fourSq = {"uid":"513126"};
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.src = 'http://platform.foursquare.com/js/widgets.js';
+    s.async = true;
+    var ph = document.getElementsByTagName('script')[0];
+    ph.parentNode.insertBefore(s, ph);
+  })();
+        </script>
+        <script type="text/javascript">
+            $(document).ready( function() {
+      $('#box').fadeIn(1500, function() {
+        $('.social').fadeIn(1500, function() {
+            $('.address').fadeIn(600);  
+        });
+      });
+      $("#fsq").css({
+        position: "absolute",
+        bottom: "10%",
+        left: "30%"
+    }).show();
+    });
+        </script>
+        <div id="copyright">&#169; Mama Noord</div>
+    </body>
+</html>
