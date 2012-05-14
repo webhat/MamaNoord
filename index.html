@@ -5,6 +5,7 @@
         <style type="text/css">
             .outerbox {
                 position : relative;
+                font-family: "Helvetica", sans-serif
             }
             #box {
                 position : absolute;
@@ -23,6 +24,7 @@
                 width : 450px;
                 bottom : 0px;
                 font-size : small;
+                font-family: "Helvetica", sans-serif
             }
             .elem {
                 position : absolute;
@@ -64,16 +66,14 @@
                     <span id="fsq"><a class="fourSq-widget"
                             href="https://foursquare.com/intent/venue.html"></a></span></div>
                 <div class="social elem">
-                    <div class="sep email"><a href="malto:info@mamanoord.nl"
-                        >info@mamanoord.nl</a></div>
+                    <div class="sep email"><a href="malto:contact@mamanoord.nl"
+                        >contact@mamanoord.nl</a></div>
                     <div class="sep tel">&#9990; 06-206 596 18</div>
                     <div class="sep">
                         <a href="http://mamanoord.tumblr.com/"><img src="twitter_16.png"
                                 alt="Twitter" /></a>
                         <a href="http://nl-nl.facebook.com/mamanoord"><img src="facebook_16.png"
-                                alt="Facebook" /></a>
-                        <a href="http://mamanoord.tumblr.com/"><img src="tumblr_16.png"
-                                alt="Tumblr Blog" /></a></div>
+                                alt="Facebook" /></a></div>
                 </div>
             </div>
         </div>
@@ -99,18 +99,16 @@
   })();
         </script>
         <script type="text/javascript">
-            $(document).ready( function() {
-      $('#box').fadeIn(1500, function() {
-        $('.social').fadeIn(1500, function() {
-            $('.address').fadeIn(600);  
-        });
+      $(document).ready( function() {
+        $('#box').fadeIn(1500, function() {
+            $('.social').fadeIn(1500);
+          });
+        $("#fsq").css({
+            position: "absolute",
+            bottom: "10%",
+            left: "30%"
+          }).show();
       });
-      $("#fsq").css({
-        position: "absolute",
-        bottom: "10%",
-        left: "30%"
-    }).show();
-    });
         </script>
         <div id="copyright">&#169; Mama Noord</div>
     </body>
