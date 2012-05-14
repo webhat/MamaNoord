@@ -55,6 +55,23 @@
                 margin : 5px;
             }</style>
         <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+        <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29889453-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+        </script>
+        <script type="text/javascript">
+  function recordOutboundLink(link, category, action) {
+    _gat._getTrackerByName()._trackEvent(category, action);
+    setTimeout('document.location = "' + link.href + '"', 100);
+  }
+        </script>
     </head>
     <body>
         <div class="outerbox">
@@ -64,16 +81,16 @@
                      /></div>
                 <div class="address elem" lang="nl">Elke tweede zaterdag 10u Cafe de Pont<br />
                     <span id="fsq"><a class="fourSq-widget"
-                            href="https://foursquare.com/intent/venue.html"></a></span></div>
+                        href="https://foursquare.com/intent/venue.html" onclick="recordOutboundLink(this, 'Outbound Links', 'foursquare.com');return false;"></a></span></div>
                 <div class="social elem">
                     <div class="sep email">
                         <a href="malto:contact@mamanoord.nl">contact@mamanoord.nl</a>
                     </div>
                     <div class="sep tel">&#9990; 06-206 596 18</div>
                     <div class="sep">
-                        <a href="http://mamanoord.tumblr.com/"><img src="twitter_16.png"
+                        <a href="https://twitter.com/MamaNoord" onclick="recordOutboundLink(this, 'Outbound Links', 'twitter.com');return false;"><img src="twitter_16.png"
                                 alt="Twitter" /></a>
-                        <a href="http://nl-nl.facebook.com/mamanoord"><img src="facebook_16.png"
+                        <a href="http://nl-nl.facebook.com/mamanoord" onclick="recordOutboundLink(this, 'Outbound Links', 'facebook.com');return false;"><img src="facebook_16.png"
                                 alt="Facebook" /></a></div>
                 </div>
             </div>
