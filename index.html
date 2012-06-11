@@ -54,7 +54,10 @@
             .sep {
                 margin : 5px;
             }</style>
-        <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/ICanHaz.js/0.10/ICanHaz.min.js"></script>
+        <script type="text/javascript" src="jquery.ab.js"></script>
+        
         <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-29889453-1']);
@@ -72,25 +75,34 @@
     setTimeout('document.location = "' + link.href + '"', 100);
   }
         </script>
+        <script type="text/javascript" src="http://mamanoord.tumblr.com/api/read/json"></script>
+        <script id="tumblrpost" type="text/html">
+            <div><a href="{{ url }}?utm_source=mn&utm_medium=feed&utm_content=a&utm_campaign=feed">{{ regular-title }}{{{ photo-caption }}}</a></div>
+        </script>
+        
     </head>
     <body>
         <div class="outerbox">
             <div id="box">
-                <div class="logo elem"><img width="150" height="150"
-                        src="Mama%20Noord%20-%20logo%20-%20small.png" alt="Mama Noord - logo"
-                     /></div>
+                <div class="logo elem">
+                    <a href="http://mamanoord.nl/" rel="me" onclick="recordOutboundLink(this, 'Outbound Links', 'home');return false;"><img width="150" height="150" src="Mama%20Noord%20-%20logo%20-%20small.png" alt="Mama Noord - logo"/></a>
+                </div>
+                <div id="tumblr" class="elem address">
+                    <div id="tumblrfeed"></div>
+                    <div style='display: none;' id="none"></div>
+                </div>
                 <div class="address elem" lang="nl">Elke tweede zaterdag 10u Cafe de Pont<br />
                     <span id="fsq"><a class="fourSq-widget"
                         href="https://foursquare.com/intent/venue.html" onclick="recordOutboundLink(this, 'Outbound Links', 'foursquare.com');return false;"></a></span></div>
                 <div class="social elem">
                     <div class="sep email">
-                        <a href="malto:contact@mamanoord.nl">contact@mamanoord.nl</a>
+                        <a href="mailto:contact@mamanoord.nl" onclick="recordOutboundLink(this, 'Outbound Links', 'contact@mamanoord.nl');return false;">contact@mamanoord.nl</a>
                     </div>
                     <div class="sep tel">&#9990; 06-206 596 18</div>
                     <div class="sep">
-                        <a href="https://twitter.com/MamaNoord" onclick="recordOutboundLink(this, 'Outbound Links', 'twitter.com');return false;"><img src="twitter_16.png"
+                        <a href="https://twitter.com/MamaNoord" rel="me" onclick="recordOutboundLink(this, 'Outbound Links', 'twitter.com');return false;"><img src="twitter_16.png"
                                 alt="Twitter" /></a>
-                        <a href="http://nl-nl.facebook.com/mamanoord" onclick="recordOutboundLink(this, 'Outbound Links', 'facebook.com');return false;"><img src="facebook_16.png"
+                        <a href="http://nl-nl.facebook.com/mamanoord" rel="me" onclick="recordOutboundLink(this, 'Outbound Links', 'facebook.com');return false;"><img src="facebook_16.png"
                                 alt="Facebook" /></a></div>
                 </div>
             </div>
@@ -102,9 +114,10 @@
                 <span class="postal-code">1031 CC</span>
                 <span class="locality">Amsterdam</span>
             </p>
-            <span class="email"><a href="malto:contact@mamanoord.nl">contact@mamanoord.nl</a></span>
+            <span class="email"><a href="malto:contact@mamanoord.nl" rel="me">contact@mamanoord.nl</a></span>
             <span class="tel">&#9990; 06-206 596 18</span>
         </div>
+        
         <script type="text/javascript">
   (function() {
     window.___fourSq = {"uid":"513126"};
@@ -119,7 +132,9 @@
         <script type="text/javascript">
       $(document).ready( function() {
         $('#box').fadeIn(1500, function() {
-            $('.social').fadeIn(1500);
+            $('.social').fadeIn(1500, function() {
+                $('#tumblr').fadeIn(1500)
+            });
           });
         $("#fsq").css({
             position: "absolute",
@@ -128,6 +143,32 @@
           }).show();
       });
         </script>
-        <div id="copyright">&#169; Mama Noord</div>
+        <script type="text/javascript">
+            $(document).ready( function() {
+                                $("#tumblr div").ab({
+                        testname: 'Tumblr',
+                        action_el: $('a')
+                    });
+                    $.each( tumblr_api_read.posts.slice(0, 1), function ( i, posts) {
+                        var post = ich.tumblrpost( posts);
+                        $("#tumblrfeed").append( post);
+                    });
+                });
+        </script>
+        <!--script type="text/javascript">
+            (function(){
+                $(document).ready( function() {
+                    $("#keypress span").ab({
+                        testname: 'Sign-Up Text',
+                        action_el: $('a')
+                    });
+                 });
+             })(jQuery);
+        </script>
+        <div id="keypress">
+            <span id='SignUp_Now'>Sign Up Now</span>
+            <span style='display: none;' id='Register_Now'>Register Now</span>
+        </div-->
+        <div id="copyright">&#169; 2012 - <a href="http://mamanoord.nl/">Mama Noord</a>, <a href="http://specialbrands.net/">SpecialBrands</a></div>
     </body>
 </html>
