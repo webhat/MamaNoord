@@ -1578,6 +1578,16 @@ a img {
 </script>
 </head>
 <body>
+<div class="vcard" style="display:none;visibility:hidden;">
+    <p class="fn">Mama Cafe</p>
+    <p class="adr">
+        <span class="street-address">Buiksloterweg 3-5</span>
+        <span class="postal-code">1031 CC</span>
+        <span class="locality">Amsterdam</span>
+    </p>
+    <span class="email"><a href="malto:contact@mamanoord.nl" rel="me">contact@mamanoord.nl</a></span>
+    <span class="tel">&#9990; 06-206 596 18</span>
+</div>
 <div role="main" id="site">
     <div id="logo" style="background-image: url(https://raw.github.com/webhat/MamaNoord/jun2012/img/Logo.png) !important;"></div>
     <div id="home" style="background-image: url(https://raw.github.com/webhat/MamaNoord/jun2012/img/Home.png) !important;">
@@ -1606,7 +1616,10 @@ a img {
     <div id="textpane">
         <div id="title"></div>
         <div id="about" class="textpane">Over Mama Noord</div>
-        <div id="agenda" class="textpane">Agenda</div>
+        <div id="agenda" class="textpane">
+            <iframe src="https://www.google.com/calendar/embed?src=bebcg85fs7vpsij7hucs55rqbk%40group.calendar.google.com&ctz=Europe/Amsterdam"
+                                                  style="border: 0" width="760" height="560" frameborder="0" scrolling="no"></iframe>
+        </div>
         <div id="together" class="textpane">Samenwerken</div>
         <div id="contact" class="textpane">Contact</div>
         <div id="tumblr" class="textpane">
@@ -1934,8 +1947,7 @@ a img {
 
     </div>
     <div>
-        <iframe src="https://www.google.com/calendar/embed?src=bebcg85fs7vpsij7hucs55rqbk%40group.calendar.google.com&ctz=Europe/Amsterdam"
-                style="border: 0" width="250" height="600" frameborder="0" scrolling="no"></iframe>
+
     </div>
     <div id="bottom"></div>
     <div id="copyright">&copy; {CopyrightYears} <a href="http://www.tumblr.com">{lang:Powered by Tumblr}</a></div>
@@ -2007,8 +2019,10 @@ a img {
 
 <script type="text/javascript"
         src="http://api.twitter.com/1/statuses/user_timeline.json?screen_name=mamanoord&include_rts=1&callback=twitter"></script>
+<script type="text/javascript" src="http://api.tumblr.com/v2/blog/mamanoord.tumblr.com/posts/text?notes_info=true&limit=5&jsonp=tumblr&api_key=SutZQLUpLTsnkMVKxeEBUEp0W1QKCMurWDbWuXmmCS58gvlXLE"></script>
 <script type="text/javascript">
-    location.hash = "tumblr";
+    if(location.hash == "")
+        location.hash = "tumblr";
 </script>
 </body>
 </html>
