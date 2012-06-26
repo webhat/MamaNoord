@@ -96,8 +96,11 @@ $(window).hashchange(function (event) {
             $(".textpane").hide();
             $("#tumblr").show();
             $("#title").hide();
-            animate()
-            $('#textpane').fadeIn('slow');
+            $('#textpane').show();
+            $("#textpane").css('top', $(whois).position().top);
+            $("#textpane").css('left',$(whois).position().left);
+            $("#textpane").width(760);
+            $("#textpane").height($(tips).height() - 17);
             break;
         default :
             console.log(location.hash);
@@ -152,6 +155,7 @@ function tumblr(data) {
 
 
 ich.refresh();
+
 
 window.mamanoord = true;
 
