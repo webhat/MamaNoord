@@ -66,7 +66,8 @@ $(document).ready(function () {
     });
     $(".link").click(function (event) {
         var url = $(this).attr("href");
-        recordLink(url, "OutBoundLinks", $(this).attr("id"));
+        var domain = url.replace(new RegExp("http[s]?:\/\/"), "").replace(new RegExp("\/.*"), "");
+        recordLink(url, domain, $(this).attr("id"));
     });
 
     $(window).hashchange();
