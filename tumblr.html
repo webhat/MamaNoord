@@ -579,7 +579,7 @@ td {
 }
 
 #logo {
-    background: url("https://raw.github.com/webhat/MamaNoord/jun2012/img/Logo.png") no-repeat left top;
+    background: url("https://raw.github.com/webhat/MamaNoord/master/img/Logo.png") no-repeat left top;
     background-size: 227px 213px;
     width: 227px;
     height: 213px;
@@ -589,7 +589,7 @@ td {
 }
 
 #home {
-    background: url("https://raw.github.com/webhat/MamaNoord/jun2012/img/Home.png") no-repeat left top;
+    background: url("https://raw.github.com/webhat/MamaNoord/master/img/Home.png") no-repeat left top;
     background-size: 797px 128px;
     width: 797px;
     height: 128px;
@@ -628,7 +628,7 @@ cursor: pointer;
 }
 
 #activity {
-    background: url("https://raw.github.com/webhat/MamaNoord/jun2012/img/Activity.png") no-repeat left top;
+    background: url("https://raw.github.com/webhat/MamaNoord/master/img/Activity.png") no-repeat left top;
     background-size: 360px 350px;
     width: 360px;
     height: 350px;
@@ -638,7 +638,7 @@ cursor: pointer;
 }
 
 #tips {
-    background: url("https://raw.github.com/webhat/MamaNoord/jun2012/img/Tips.png") no-repeat left top;
+    background: url("https://raw.github.com/webhat/MamaNoord/master/img/Tips.png") no-repeat left top;
     background-size: 437px 647px;
     width: 437px;
     height: 647px;
@@ -659,7 +659,7 @@ cursor: pointer;
 }
 
 #whois {
-    background: url("https://raw.github.com/webhat/MamaNoord/jun2012/img/WhoIs.png") no-repeat left top;
+    background: url("https://raw.github.com/webhat/MamaNoord/master/img/WhoIs.png") no-repeat left top;
     background-size: 360px 297px;
     width: 360px;
     height: 297px;
@@ -669,7 +669,7 @@ cursor: pointer;
 }
 
 #social {
-    background: url("https://raw.github.com/webhat/MamaNoord/jun2012/img/Social.png") no-repeat left top;
+    background: url("https://raw.github.com/webhat/MamaNoord/master/img/Social.png") no-repeat left top;
     background-size: 227px 81px;
     width: 227px;
     height: 81px;
@@ -694,7 +694,7 @@ float: left;
 }
 
 #twitter {
-    background: url("https://raw.github.com/webhat/MamaNoord/jun2012/img/Twitter.png") no-repeat left center;
+    background: url("https://raw.github.com/webhat/MamaNoord/master/img/Twitter.png") no-repeat left center;
     background-size: 227px 481px;
     width: 227px;
     height: 481px;
@@ -748,7 +748,7 @@ height: 100%;
 #textpane #title {
     display: block;
     height: 42px;
-    background-image: url(https://raw.github.com/webhat/MamaNoord/jun2012/img/Home.png);
+    background-image: url(https://raw.github.com/webhat/MamaNoord/master/img/Home.png);
     background-repeat: no-repeat;
 }
 
@@ -1573,6 +1573,9 @@ a img {
 <script id="tipsitem" type="text/x-icanhaz">
     <div class="tweet"><a href="{{ post_url }}#tumblr">{{ title }}</a></div><div class="timeago" title="{{ utc }}">{{ date }}</div><div class="clear"></div>
 </script>
+<script id="contactitem" type="text/x-icanhaz">
+    <div class="tweet" style="width: 400px;margin-left: 120px;">{{ body }}</div><div class="timeago" title="{{ utc }}">{{ date }}</div><div class="clear"></div>
+</script>
 <script id="activityitem" type="text/x-icanhaz">
     <div class="tweet"><a href="{{ post_url }}#tumblr">{{ title }}</a></div><div class="timeago" title="{{ utc }}">{{ date }}</div><div class="clear"></div>
 </script>
@@ -1589,39 +1592,45 @@ a img {
     <span class="tel">&#9990; 06-206 596 18</span>
 </div>
 <div role="main" id="site">
-    <div id="logo" style="background-image: url(https://raw.github.com/webhat/MamaNoord/jun2012/img/Logo.png) !important;"></div>
-    <div id="home" style="background-image: url(https://raw.github.com/webhat/MamaNoord/jun2012/img/Home.png) !important;">
+    <div id="logo" style="background-image: url(https://raw.github.com/webhat/MamaNoord/master/img/Logo.png) !important;"></div>
+    <div id="home" style="background-image: url(https://raw.github.com/webhat/MamaNoord/master/img/Home.png) !important;">
         <div class="nav" id="homebutton" href="#home"></div>
         <div class="nav" id="aboutbutton" href="#about"></div>
         <div class="nav" id="agendabutton" href="#agenda"></div>
         <div class="nav" id="togetherbutton" href="#together"></div>
         <div class="nav" id="contactbutton" href="#contact"></div>
     </div>
-    <div id="activity" style="background-image: url(https://raw.github.com/webhat/MamaNoord/jun2012/img/Activity.png);">
+    <div id="activity" style="background-image: url(https://raw.github.com/webhat/MamaNoord/master/img/Activity.png);">
         <div class="headerbox"></div>
     </div>
-    <div id="social" style="background-image: url(https://raw.github.com/webhat/MamaNoord/jun2012/img/Social.png);">
+    <div id="social" style="background-image: url(https://raw.github.com/webhat/MamaNoord/master/img/Social.png);">
         <div id="facebooklink" class="sociallink link" href="https://www.facebook.com/mamanoord"></div>
         <div id="twitterlink" class="sociallink link" href="https://twitter.com/#!/MamaNoord"></div>
     </div>
-    <div id="tips"  style="background-image: url(https://raw.github.com/webhat/MamaNoord/jun2012/img/Tips.png);">
+    <div id="tips"  style="background-image: url(https://raw.github.com/webhat/MamaNoord/master/img/Tips.png);">
         <div class="headerbox">
         </div>
         <div id="mirjam" class="nav link" href="http://miriambouwens.blogspot.nl/"></div>
     </div>
-    <div id="twitter" style="background-image: url(https://raw.github.com/webhat/MamaNoord/jun2012/img/Twitter.png);">
+    <div id="twitter" style="background-image: url(https://raw.github.com/webhat/MamaNoord/master/img/Twitter.png);">
         <div class="headerbox"></div>
     </div>
-    <div id="whois" style="background-image: url(https://raw.github.com/webhat/MamaNoord/jun2012/img/WhoIs.png);"></div>
+    <div id="whois" style="background-image: url(https://raw.github.com/webhat/MamaNoord/master/img/WhoIs.png);"></div>
     <div id="textpane">
         <div id="title"></div>
-        <div id="about" class="textpane">Over Mama Noord</div>
+        <div id="about" class="textpane">
+		<div class="headerbox"></div>
+	</div>
         <div id="agenda" class="textpane">
             <iframe src="https://www.google.com/calendar/embed?src=bebcg85fs7vpsij7hucs55rqbk%40group.calendar.google.com&ctz=Europe/Amsterdam"
                                                   style="border: 0" width="760" height="560" frameborder="0" scrolling="no"></iframe>
         </div>
-        <div id="together" class="textpane">Samenwerken</div>
-        <div id="contact" class="textpane">Contact</div>
+        <div id="together" class="textpane">
+		<div class="headerbox"></div>
+	</div>
+        <div id="contact" class="textpane">
+		<div class="headerbox"></div>
+	</div>
         <div id="tumblr" class="textpane">
         <div id="content">
 
@@ -2014,12 +2023,12 @@ a img {
     }(document, 'script'));
 </script>
 
-<script type="text/javascript" src="https://raw.github.com/webhat/MamaNoord/jun2012/js/script.js"></script>
+<script type="text/javascript" src="https://raw.github.com/webhat/MamaNoord/master/js/script.jsFIXME"></script>
 <script>window.mamanoord || document.write('<script src="js/script.js"><\/script>')</script>
 
 <script type="text/javascript"
         src="http://api.twitter.com/1/statuses/user_timeline.json?screen_name=mamanoord&include_rts=1&callback=twitter"></script>
-<script type="text/javascript" src="http://api.tumblr.com/v2/blog/mamanoord.tumblr.com/posts/text?notes_info=true&limit=5&jsonp=tumblr&api_key=SutZQLUpLTsnkMVKxeEBUEp0W1QKCMurWDbWuXmmCS58gvlXLE"></script>
+<script type="text/javascript" src="http://api.tumblr.com/v2/blog/mamanoord.tumblr.com/posts/text?notes_info=true&limit=11&jsonp=tumblr&api_key=SutZQLUpLTsnkMVKxeEBUEp0W1QKCMurWDbWuXmmCS58gvlXLE"></script>
 <script type="text/javascript">
     if(location.hash == "")
         location.hash = "tumblr";
