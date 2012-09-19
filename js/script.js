@@ -147,6 +147,30 @@ function tumblr(data) {
             var post = ich.tipsitem(item);
             $("#tips .headerbox").append(post);
         }
+        if (item.tags[0] == "overmamanoord") {
+            var html = item.body;
+            var div = document.createElement("div");
+            div.innerHTML = html;
+            item.body = div.innerText;
+            var post = ich.contactitem(item);
+            $("#about .headerbox").append(post);
+        }
+        if (item.tags[0] == "contact") {
+            var html = item.body;
+            var div = document.createElement("div");
+            div.innerHTML = html;
+            item.body = div.innerText;
+            var post = ich.contactitem(item);
+            $("#contact .headerbox").append(post);
+        }
+        if (item.tags[0] == "samen") {
+            var html = item.body;
+            var div = document.createElement("div");
+            div.innerHTML = html;
+            item.body = div.innerText;
+            var post = ich.contactitem(item);
+            $("#together .headerbox").append(post);
+        }
         if (item.tags[0] == "activiteit") {
             var post = ich.activityitem(item);
             $("#activity .headerbox").append(post);
